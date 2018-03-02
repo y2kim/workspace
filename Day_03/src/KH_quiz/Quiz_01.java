@@ -16,7 +16,7 @@ public class Quiz_01 {
 		c = (char)b ;
 		s = (short)c ;
 		c = (char)s ;
-		i = (int)100L;
+		i = (int)100L; // or 100
 		l = 500;
 		f = l;
 		f = (float)5.11;
@@ -26,6 +26,9 @@ public class Quiz_01 {
 		System.out.println(i);
 		System.out.println(l);
 		System.out.println(f);
+		
+		
+		
 	}
 
 }

@@ -37,6 +37,7 @@ public class Exam01 {
 		System.out.println(d);
 		System.out.println(d1);
 		System.out.println(d3);
+		System.out.println(d1+d3);
 		System.out.println(tf);
 		
 		
