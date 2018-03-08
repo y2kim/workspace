@@ -33,20 +33,23 @@ public class Quiz_06 {
 							System.out.println("31 당첨 아이스크림 쏘기 YOU LOSE");
 							lose = lose +1;
 							break;
-						}
-						if( 1<=myCnt && myCnt<=3 ) {							
-							for(int i=1 ; i<=myCnt ;i++) {	
-//								if(countnum==MAXNUM) {
-//									System.out.println("31 당첨 아이스크림 쏘기 YOU LOSE");
-//									lose = lose +1;
-//								}
-								System.out.println(countnum+" !");
-								countnum=countnum+1;											
+						}else if( 1<=myCnt && myCnt<=3 ) {  // 내가 실수 한건 if 2개일때 두개의 조건을 하나 만족시켜도 또 확인한다는점 잊었다.
+							if(countnum<MAXNUM) {  // 그래서
+								for(int i=1 ; i<=myCnt ;i++) {
+									if(countnum<MAXNUM)
+									{
+									System.out.println(countnum+" !");
+									countnum=countnum+1;
+									turn =1;
+									}else if(countnum>=MAXNUM) {
+										break;
+									}					
+								}
 							}
 						}else if(myCnt>=0 &&4<=myCnt) {
 							System.out.println("1~3 사이 숫자를 집어넣어주세요");
-						}	
-						turn =1;
+						}							
+
 					}else if(turn ==1){
 						System.out.println("1회 에서 3회까지중 정해주세요.(컴퓨터):");
 						int comnum = (int)(Math.random()*3+1);
@@ -54,16 +57,19 @@ public class Quiz_06 {
 							System.out.println("31 당첨 아이스크림 쏘기 YOU WIN");
 							win = win +1;
 							break;
+						}else if(countnum<MAXNUM) {
+							for(int i=1 ; i<=comnum ;i++) {	
+								if(countnum<MAXNUM)
+								{
+									System.out.println(countnum+" !");
+									countnum=countnum+1;
+									turn = 0;
+								}else if(countnum>=MAXNUM) {
+									break;
+								}
+							} 
 						}
-						for(int i=1 ; i<=comnum ;i++) {		
-//							if(countnum==MAXNUM) {
-//							
-//							}
-							System.out.println(countnum+" !");
-							countnum=countnum+1;
-						}					
 						
-						turn = 0;
 					}
 
 				}

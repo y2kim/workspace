@@ -18,9 +18,11 @@ public class Home_work {
 				int num = Integer.parseInt(sc.nextLine());
 				System.out.println("--------------------");
 				for(int i=2; i<num;i++) {
+					
 					if(num%i ==0){
 						count = count +1;
 					}
+					
 				}
 				if(count ==0) {
 					System.out.println(num+" 는 소수 입니다.");
