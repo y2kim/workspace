@@ -24,8 +24,7 @@ public class Quiz_06_02 {
 
 				System.out.println("===결과 ===");
 				switch (multi) {
-				case "+":
-					
+				case "+":					
 					System.out.println(num1+" + "+ num2+" = " + (num1+num2));
 					break;
 				case "-":					
@@ -40,7 +39,7 @@ public class Quiz_06_02 {
 				case "%":
 					System.out.println(num1+" % "+ num2+" = " + (num1%num2));
 					break;
-					/*마음 같아서 default 하고 싶지만 타이밍 문제가 있음*/
+					/*마음 같아서 default 하고 싶지만 타이밍 문제가 있음*/// 논리적으로 말이 안되는 프로그램
 				}
 			}else{
 				System.out.println("잘못된 수식입니다. 다시 입력하시고  리스트확인해주세요");
