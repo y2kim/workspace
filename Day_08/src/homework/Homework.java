@@ -32,11 +32,11 @@ public class Homework {
 		int sumcount5=0;
 		Boolean Bonus = false;
 		// (int)(Math.random()*45+1);
-		for(int i=0;i<lotteAnswer.length;i++) {
+		for(int i=0;i<lotteAnswer.length;i++) { //정답인 로또 정하기
 			lotte = (int)(Math.random()*45+1);
 			lotteAnswer[i] =lotte;
 			for(int j=0;j<i;j++) {
-				if(lotteAnswer[i]==lotteAnswer[j]) {
+				if(lotteAnswer[i]==lotteAnswer[j]) {  // 같은 숫자 빼기  ㅁ[1] 비교후 [0] [1] 이 같을때 감소시켜 백 시킴
 					i--;
 					break;
 				}
@@ -46,7 +46,7 @@ public class Homework {
 		}
 
 
-		while(true) {
+		while(true) {  // 무한루프
 			
 			for(int j=0;j<lottearr.length;j++) {
 				lotte = (int)(Math.random()*45+1);
@@ -64,7 +64,7 @@ public class Homework {
 					"<"+lottearr[2]+"> "+"<"+lottearr[3]+"> "+"<"+lottearr[4]+"> "+"<"+lottearr[5]+"> ");	
 
 			
-			for(int j=0;j<6;j++) {
+			for(int j=0;j<6;j++) {  //6 까지니 012345 비교 함
 				if(lotteAnswer[j]==lottearr[j]) {	
 					sameCount = sameCount +1;
 				}	
