@@ -4,7 +4,7 @@ public class Quiz_06 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[] im = new int[100];
+		
 
 		for(int i=1;i<101;i++) {
 			char[] arr = String.valueOf(i).toCharArray(); // 이 개념을 몰랐던듯  스트링 배열로 바꾸고 캐릭터 어레이로 바꿈  숫자->문자열->배열
@@ -24,11 +24,6 @@ public class Quiz_06 {
 			System.out.println("");
 			count =0;
 		}
-
-
-
-
-
 
 	}
 
