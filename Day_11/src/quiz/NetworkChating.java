@@ -8,18 +8,49 @@ package quiz;
 
 public class NetworkChating {
 // chatting  이게 맞는 스펠링 
-	String nickName;
-	String networkAdress;
-	String textMessage;
-
-	void sendMessage() {
-
+	private String nickName;
+	private	String networkAdress;
+	private String textMessage;
+	private String textMessage2;
+	
+	public String getTextMessage2() {
+		return textMessage2;
 	}
-	void takeMessage() {
-
+	public void setTextMessage2(String textMessage2) {
+		this.textMessage2 = textMessage2;
 	}
-	void netConnet() {
-
+	public String getNickName() {
+		return nickName;
+	}
+	public void setNickName(String nickName) {
+		this.nickName = nickName;
+	}
+	public String getNetworkAdress() {
+		return networkAdress;
+	}
+	public void setNetworkAdress(String networkAdress) {
+		this.networkAdress = networkAdress;
+	}
+	public String getTextMessage() {
+		return textMessage;
+	}
+	public void setTextMessage(String textMessage) {
+		this.textMessage = textMessage;
+	}
+	
+	String sendMessage(String textMessage , String nickName) {
+		this.textMessage = textMessage;
+		this.nickName = nickName;
+		String result1 = this.textMessage;
+		String result2 = this.nickName;
+		String result3 = result1+","+result2;
+		return result3;
+	}
+	String takeMessage(String textMessage2) {
+		return this.textMessage2;
+	}
+	String netConnet(String netstr) {
+		return netstr;
 	}
 	
 }

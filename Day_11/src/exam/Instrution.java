@@ -34,7 +34,7 @@ import javax.swing.JFrame;
 public class Instrution {
 
 	public static void main(String[] args) {
-		Tv lg = new Tv(); // 메모리에  힙이 둥둥 , 값을 묶어 놓은 모임체
+		Tv lg/*Tv로 만든 인스턴스의 주소*/ = new Tv(); // 메모리에  힙이 둥둥 , 값을 묶어 놓은 모임체
 		// Tv samsung = new Tv();  각자 또 다른 인스턴스  // lg하고 또 다름 
 		// new 할때마다 생성 
 		/* 
@@ -81,6 +81,13 @@ public class Instrution {
 		// 애초에 new 때문에  달라짐 , 어디에 만드는거가 중요하다
 		//lg.channel = 10;
 		
+		lg/*1000번지 주소*/.getThis().getThis().getThis()/*1000번지  주소*/;// 쓸일을 별로 없겠지만 빌더패턴때 사용할수 있음
+		// 부르면 자기 주소 다시 부름  //  코드를 여러번 
+		//빌더패턴
+		Tv lg2; // 실제 인스턴스 내용물은 텅빔
+		//lg2.getChannel() ; //이클립스의 인공지능 땜시
+		// 막상 쓸려고 하면 에러 
+		//
 		
 	}
 }
