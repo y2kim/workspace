@@ -69,27 +69,34 @@ public class MyFileZila {
 
 			switch (firstMenu) {
 			case 1:
-				System.out.println("Input url");
-				System.out.print(">>> ");
-				connetNetAdress = sc.nextLine();
-				System.out.println("Input Port");
-				System.out.print(">>> ");
-				try {
-					portNumber = Integer.parseInt(sc.nextLine());
-				} catch (Exception e) {
-					System.out.println("정확한 포트번호를 입력하세요");
-					continue;
-				}
+				while(true) {
+					System.out.println("Input url    (탈출할시려면 exit,Exit 을 입력하세요)");
+					System.out.print(">>> ");
+					connetNetAdress = sc.nextLine();
+					if(connetNetAdress.equals("exit")||connetNetAdress.equals("Exit")) {
+						main(args); // 메인으로 
+					}
+					System.out.println("Input Port");
+					System.out.print(">>> ");
+					try {
+						portNumber = Integer.parseInt(sc.nextLine());	
+					} catch (Exception e) {
+						System.out.println("정확한 포트번호를 입력하세요");
+						continue;
+					}
 
-				try {
-					System.out.println("Try to connet :" + connetNetAdress +"(port : "+portNumber+")");
-					client.connect(connetNetAdress, portNumber);	
-				}catch (Exception e) {
-					System.out.println("Fail --- Exit Program");
-					e.printStackTrace();
-					continue;
-				}
 
+					try {
+						System.out.println("Try to connet :" + connetNetAdress +"(port : "+portNumber+")");
+						client.connect(connetNetAdress, portNumber);
+						break;
+					}catch (Exception e) {
+						System.out.println("Fail --- Exit Program");
+						//e.printStackTrace();
+						System.out.println("다시 처음부터 입력해주세요");
+						continue;
+					}
+				}
 				System.out.println("FTP Server is conneted!");
 				while(true) {
 					System.out.print("Input ID : ");

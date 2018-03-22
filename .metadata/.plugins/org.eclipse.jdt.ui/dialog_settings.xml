@@ -68,11 +68,12 @@
 	</section>
 	<section name="FatJarPackageWizard">
 		<item value="D:\y2kim\workspace" key="FatJarPackageWizardPage.ANTSCRIPT_LOCATION"/>
-		<item value="MyFileZila - Day_12" key="FatJarPackageWizardPage.LAUNCH_CONFIGURATION_SELECTION_NAME"/>
-		<item value="D:\Act\FTPFinal.jar" key="FatJarPackageWizardPage.DESTINATION_PATH_SELECTION"/>
+		<item value="MainProgram - Day_16" key="FatJarPackageWizardPage.LAUNCH_CONFIGURATION_SELECTION_NAME"/>
+		<item value="D:\Act\SemiStudentMangement.jar" key="FatJarPackageWizardPage.DESTINATION_PATH_SELECTION"/>
 		<item value="false" key="FatJarPackageWizardPage.ANTSCRIPT_SAVE"/>
 		<item value="1" key="FatJarPackageWizardPage.LIBRARY_HANDLING"/>
 		<list key="FatJarPackageWizardPage.DESTINATION_NAMES_ID">
+			<item value="D:\Act\SemiStudentMangement.jar"/>
 			<item value="D:\Act\FTPFinal.jar"/>
 			<item value="D:\Act\b.jar"/>
 			<item value="D:\Act\a.jar"/>

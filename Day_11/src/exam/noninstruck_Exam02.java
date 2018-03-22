@@ -1,4 +1,4 @@
-package exam;
+package exam; // 특이
 
 import java.util.Scanner;
 
