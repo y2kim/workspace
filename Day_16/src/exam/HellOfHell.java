@@ -2,6 +2,17 @@ package exam;
 
 import java.util.ArrayList;
 
+import study.Student;
+import study.StudentManage;
+
+class A {
+	
+}
+
+class B{
+	
+}
+
 public class HellOfHell { //<- 클래스 중괄호
 	int c; // <- 멤버변수  인스턴스가 지워질때  사라짐   , 쉽게 메모리에서  안사라짐 
 	//coape 스코프 - 중괄호 - 영역  <-  
@@ -22,6 +33,16 @@ public class HellOfHell { //<- 클래스 중괄호
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		//int a = new int 10;
+		
+		A a = new A();  //  두개의 인스턴스 주소가 다르다 
+		B b = new B();  //
+		System.out.println(a.equals(b));
+		
+		
+		
 	}
+	
+
+	
 
 }

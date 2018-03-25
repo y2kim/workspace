@@ -1,4 +1,4 @@
-package study;
+package students;
 
 import java.util.Scanner;
 
@@ -70,10 +70,12 @@ public class MainProgram {
 				mathSco = Scan();
 				
 				if(start == 0) {
-					std.FirstAddStuednt(new StudentInfo(stuID, stuName, korSco, engSco, mathSco));
+					//std.FirstAddStuednt(new Student(stuID, stuName, korSco, engSco, mathSco));
+					std.HashAddStuednt(stuID, new Student(stuID, stuName, korSco, engSco, mathSco));
 					start = 1;
 				}else if(start >= 1) {
-					std.AddStuednt(new StudentInfo(stuID, stuName, korSco, engSco, mathSco));
+					std.HashAddStuednt(stuID, new Student(stuID, stuName, korSco, engSco, mathSco));
+					//std.AddStuednt(new Student(stuID, stuName, korSco, engSco, mathSco));
 				}
 				break;
 			case 2 :
@@ -126,6 +128,11 @@ public class MainProgram {
 				break;
 			case 5 :
 				System.exit(0);
+				break;
+			case 6 :
+				System.out.println("찾고자 하는 번호가 무엇인지 쓰시오");
+				int find = Scan();
+				std.findStudent(find);
 				break;
 			default:
 				System.out.println("fuck");

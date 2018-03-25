@@ -1,6 +1,6 @@
-package study;
+package students;
 
-abstract public class Student {
+public class Student {
 	
 	private int StuID ;
 	private String StuName;
@@ -18,9 +18,13 @@ abstract public class Student {
 	}
 	
 
-	abstract public int Total();
+	public int Total() {
+		return this.korSco+this.EngSco + this.MathSco ;
+	}
 	
-	abstract public double Avg();
+	public double Avg() {
+		return (this.korSco+this.EngSco + this.MathSco)/3 ;
+	}
 	
 	public int getStuID() {
 		return StuID;

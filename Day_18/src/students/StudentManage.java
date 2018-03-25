@@ -1,18 +1,38 @@
-package study;
+package students;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class StudentManage {
 	private ArrayList<Student> studentDB;
+	private Map<Integer, Student> map;
 	Scanner sc = new Scanner(System.in);
 
 	public StudentManage() {
 		this.studentDB = new ArrayList<Student>();
+		this.map = new HashMap();
 	}
 
 	public void FirstAddStuednt(Student StudnetMember) {
 		studentDB.add(StudnetMember);
+	}
+	
+	public void HashAddStuednt(int stuid,  Student StudnetMember) {
+		boolean isFind = true;
+		for(int i :map.keySet()) {
+			if(i==StudnetMember.getStuID()) {
+				isFind = false;
+				break;
+			}
+		}
+		if(isFind == true) {
+			map.put(stuid,StudnetMember);
+		}else {
+			System.out.println("ID가 중복되었습니다.");
+		}
+		
 	}
 
 	public boolean isIdExist(int id) {
@@ -53,6 +73,23 @@ public class StudentManage {
 			System.out.println("ID가 중복되었습니다.");
 		}
 	}
+	
+//	public void HashAddStuednt(int stuid, Student StudnetMember) {
+//		boolean isFind = true;
+//		for(Student studntInfo:map) {
+//			if(studntInfo.getStuID()==StudnetMember.getStuID()) {
+//				isFind = false;
+//				break;
+//			}
+//		}
+//
+//
+//		if(isFind == true) {
+//			studentDB.add(StudnetMember);
+//		}else {
+//			System.out.println("ID가 중복되었습니다.");
+//		}
+//	}
 
 	public int CheckValue() {
 		int ckck =0;
@@ -62,6 +99,10 @@ public class StudentManage {
 		return ckck;
 	}
 
+	public void findStudent(int stunum) {
+		System.out.println(stunum + " : " + map.get(stunum));
+	}
+	
 	public void DelStuednt(int StudnetMember) {
 		Student StudnetMembers;
 		boolean isFind = false;
