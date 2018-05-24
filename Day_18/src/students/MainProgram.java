@@ -30,6 +30,7 @@ public class MainProgram {
 			System.out.println("3. 학생 정보 삭제");
 			System.out.println("4. 학생 정보 수정");
 			System.out.println("5. 프로그램 종료");
+			System.out.println("5. 학생 검색");
 			System.out.print(">> ");
 			int menu =0;
 			try {
@@ -79,22 +80,23 @@ public class MainProgram {
 				}
 				break;
 			case 2 :
-				int howman2 = std.CheckValue();
+				int howman2 = std.HashCheckValue();
 				if(howman2 ==0) {
 					System.out.println("학생정보가 없습니다.");
 				}else {
 					System.out.println("학생 정보들");
-					std.ScreenStuednt();
+					//std.ScreenStuednt();
+					std.HashScreenStuednt();
 				}
 				break;
 			case 3 :
-				int howman3 = std.CheckValue();
+				int howman3 = std.HashCheckValue();
 
 				if(howman3 ==0) {
 					System.out.println("학생정보가 없습니다.");
 				}else {
 					System.out.println("학생 정보들");
-					std.ScreenStuednt();
+					std.HashScreenStuednt();
 					System.out.println("삭제할 학생 ID :");
 					int studelID =0;
 					try {
@@ -103,26 +105,25 @@ public class MainProgram {
 					} catch (Exception e) {
 						System.out.println("숫자가 아닌 값을 넣어 메인으로 돌아갑니다.");
 					}
-					std.DelStuednt(studelID);
+					std.HashDelStuednt(studelID);
 				}
 
 				break;
 			case 4 :
-				int howman4 = std.CheckValue();
+				int howman4 = std.HashCheckValue();
 				if(howman4 ==0) {
 					System.out.println("학생정보가 없습니다.");
 				}else {
 					System.out.println("학생 정보들");
-					std.ScreenStuednt();
+					std.HashScreenStuednt();
 					System.out.println("수정할 학생 ID :");
 					int stufixID =0;
 					try {
 						stufixID = Integer.parseInt(sc.nextLine());
-
 					} catch (Exception e) {
 						System.out.println("숫자가 아닌 값을 넣어 메인으로 돌아갑니다.");
 					}
-					std.FixStuednt(stufixID);
+					std.HashFixStuednt(stufixID);
 				}
 
 				break;
